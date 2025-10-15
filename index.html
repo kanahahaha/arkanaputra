@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Administrasi Sistem Jaringan XII TKJ A</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f7fc;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0a54a0;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 25px auto;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgb(0 0 0 / 0.1);
+    }
+    .profile {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .photo {
+      flex-shrink: 0;
+      width: 150px;
+      height: 150px;
+      background: #ddd url('beckham.jpg') center/cover no-repeat;
+      border-radius: 12px;
+      border: 3px solid #0a54a0;
+    }
+    .cph{
+      width: 600px;
+      height: 400px;
+    }
+    .info {
+      flex: 1;
+      min-width: 250px;
+    }
+    .info p {
+      margin: 8px 0;
+      font-size: 1.1rem;
+    }
+    .info p strong {
+      color: #0a54a0;
+    }
+    nav {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background: #0a54a0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    nav button:hover {
+      background: #08448b;
+    }
+    section {
+      margin-top: 30px;
+    }
+    section h2 {
+      color: #0a54a0;
+      border-bottom: 3px solid #0a54a0;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+    .hidden {
+      display: none;
+    }
+    /* Konten rangkuman */
+    .summary img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+      }
+      .info {
+        text-align: center;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Administrasi Sistem Jaringan XII TKJ A</h1>
+</header>
+
+<main>
+  <div class="profile">
+    <div class="photo" aria-label="Foto profil Arkana Putra Ashshiddiq"></div>
+    <div class="info">
+      <p><strong>Nama :</strong> Arkana Putra Ashshiddiq</p>
+      <p><strong>Alamat:</strong> Jl. Jati Unggul Blok A No 1G</p>
+      <p><strong>Cita-cita:</strong> Jadi orang kaya dan masuk surga</p>
+      <p><strong>Hobi:</strong> Main game</p>
+    </div>
+  </div>
+
+  <nav>
+    <button onclick="showSection('profile')">Data Diri</button>
+    <button onclick="showSection('CPH')">Rangkuman Materi Control Panel Hosting</button>
+    <button onclick="showSection('Hosting')">Rangkuman Materi Pengantar Hosting</button>
+  </nav>
+
+  <section id="profile" >
+    <h2>Data Diri</h2>
+    <p>Nama lengkap saya adalah <strong>Arkana Putra Ashshiddiq</strong>. Saya tinggal di alamat Jl. Jati Unggul Blok A No 1G. Saya memiliki cita-cita untuk menjadi orang kaya dan masuk surga. Salah satu hobi saya adalah main game.</p>
+  </section>
+
+  <section id="CPH" class="hidden">
+    <h2>Rangkuman Materi Control Panel Hosting</h2>
+    <p>Control Panel Hosting adalah aplikasi online yang berfungsi untuk mengatur website.</p>
+
+    <p>Manfaat Control Panel Hosting:</p>
+    <ul>
+      <li>Mengelola/Meremote dari jarak jauh</li>
+      <li>Dapat mengetahui spesifikasi server hosting yang di sewa</li>
+      <li>Mampu mengelolal website dengan mudah</li>
+    </ul>
+
+<img class="cph" src="cph.jpg" alt="Tampilan control panel hosting cPanel" />
+
+    <p>Fitur utama control panel hosting :</p>
+    <ul>
+      <li>Preference: untuk mengelola email dari domain yang di buuat</li>
+      <li>Files: untuk mengelola file yang ada di website</li>
+      <li>Mail: untuk mengelola email dari domain yang di buat</li>
+      <li>Logs: untuk melihat aktivitas website/monitoring website</li>
+      <li>Domain: untuk mengatur domain website</li>
+      <li>Database: untuk mengatur data-data yang ada di website</li>
+      <li>Software: untuk menginstall aplikasi tambahan yang di butuhkan</li>
+    </ul>
+
+    
+
+  </section>
+
+  <section id="Hosting" class="hidden">
+    <h2>Rangkuman Materi Pengantar Hosting</h2>
+    <p>Hosting adalah layanan penyewaan server yang menyediakan sumber daya untuk menyimpan semua file dan data sebuah situs web atau aplikasi agar dapat diakses secara online melalui internet. Layanan ini bisa dianalogikan sebagai "tanah" (hosting) tempat "rumah" (website) berdiri, sementara "alamat" rumah (domain) adalah penunjuk ke sana. Hosting menyimpan berbagai jenis data, termasuk teks, gambar, video, aplikasi, dan database. </p>
+
+    <p>Beberapa control panel populer antara lain cPanel, Plesk, dan DirectAdmin. Masing-masing memiliki fitur yang memudahkan pengguna dalam mengelola website dan layanan hosting dengan efisien.</p>  
+
+ <img src="analogi.JPG" alt="Tampilan control panel hosting cPanel" />
+ 
+    <p>Fitur Hosting:</p>
+    <ul>
+      <li>Menyimpan data: Hosting berfungsi sebagai tempat penyimpanan utama untuk semua file yang membentuk sebuah situs web, seperti halaman HTML, gambar, skrip, dan basis data. </li>
+      <li>Memungkinkan akses internet: Dengan hosting, situs web menjadi dapat diakses oleh siapa saja di seluruh dunia melalui internet setelah mereka mengetikkan nama domain di peramban. </li>
+      <li>Mendukung fungsi email profesional: Hosting memungkinkan Anda membuat alamat email khusus dengan domain sendiri (misalnya, nama@domainanda.com), yang meningkatkan kredibilitas bisnis. </li>
+    </ul>
+
+   
+
+  </section>
+</main>
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('main > section');
+    sections.forEach(sec => {
+      if (sec.id === id) sec.classList.remove('hidden');
+      else sec.classList.add('hidden');
+    });
+    // Scroll ke atas section supaya user langsung lihat konten
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+  }
+</script>
+
+</body>
+</html>
